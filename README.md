@@ -1,74 +1,72 @@
-<<<<<<< HEAD
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-=======
 <p align="center">
   <img alt="Imersão React" width="150px" src="https://www.alura.com.br/assets/img/imersoes/react/imersao-react-logo.1594044142.svg" />
 </p>
->>>>>>> 92792d5d11be7dadba9ff4bd6089832d2af64751
 
-In the project directory, you can run:
+<p align="center">
+    <a href="https://reactflix.felipefrm.vercel.app/"><img alt="Metalflix" width="300px" src="https://github.com/felipefrm/metalflix/blob/master/src/assets/img/Logo.png" /></a>
+</p>
 
-### `npm start`
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/felipefrm/metalflix?color=%2304D361">
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/felipefrm/metalflix">
+	
+  <a href="https://www.linkedin.com/in/felipe-melo-a78504186/">
+    <img alt="Made by felipefrm" src="https://img.shields.io/badge/made%20by-felipefrm-%2304D361">
+  </a>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+  <a href="https://github.com/felipefrm/ecoleta/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/felipefrm/metalflix">
+  </a>
+</p>
 
-### `npm test`
+## 💻 Projeto
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Criado durante a Imersão React da Alura, o Metalflix é uma aplicação Web que permite os usuários reunir e listar os melhores sons de suas bandas de Metal preferidas.
 
-### `npm run build`
+<p align="center">
+    <a href="https://reactflix.felipefrm.vercel.app/"><img alt="Metalflix" src="https://github.com/felipefrm/metalflix/blob/master/.github/screenshot.png" /></a>
+</p>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<a id="tecnologias"></a>
+## :rocket: Tecnologias
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Node.js][nodejs]
+- [React][reactjs]
+- [Json Server](https://www.npmjs.com/package/json-server)
+- [Styled Components](https://styled-components.com/)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<a id="layout"></a>
+## 🔖 Layout
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+O layout do projeto pode ser visto através do [Figma](https://www.figma.com/file/tGiRfDCatcGfbftU8tBODk/AluraFlix?node-id=181%3A10).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## :information_source: Como rodar o projeto
 
-## Learn More
+Após baixar o projeto, acesse ele via seu terminal rode os comandos:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+npm install
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🤔 Como contribuir
 
-### Code Splitting
+- Faça um fork;
+- Crie uma branch com a sua feature: `git checkout -b my-feature`;
+- Faça um commit com suas mundaças: `git commit -m 'feat: My new feature'`;
+- Dê um push para sua branch: `git push origin my-feature`.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+<h4 align="center">
+     Feito por 💜  <a href="https://www.linkedin.com/in/felipe-melo-a78504186/" target="_blank">Felipe Melo</a>
+</h4>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+[nodejs]: https://nodejs.org/
+[reactjs]: https://reactjs.org
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
