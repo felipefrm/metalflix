@@ -2,20 +2,41 @@
   "categorias": [
     {
       "id": 1,
-      "titulo": "Front End",
-      "cor": "#6BD1FF",
-      "link_extra": {
-        "text": "Formação de Front End na Alura",
-        "url": "https://www.alura.com.br/cursos-online-front-end"
-      }
+      "titulo": "Metallica",
+      "cor": "#6BD1FF"
+    },
+    {
+      "id": 2,
+      "titulo": "Iron Man",
+      "cor": "#00C86F"
+    },
+    {
+      "id": 3,
+      "titulo": "Slipknot",
+      "cor": "#9cd33b"
+    },
+    {
+      "id": 4,
+      "titulo": "Avenged Sevenfold",
+      "cor": "orange"
+    },
+    {
+      "id": 5,
+      "titulo": "Bring Me The Horizon",
+      "cor": "red"
+    },
+    {
+      "id": 6,
+      "titulo": "Black Sabbath",
+      "cor": "rgb(107, 91, 226)"
     }
-   ],
+  ],
   "videos": [
     {
-      "id": 1,
+      "titulo": "Fuel",
+      "url": "https://www.youtube.com/watch?v=PvF9PAxe5Ng",
       "categoriaId": 1,
-      "titulo": "SEO com React",
-      "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
+      "id": 1
     }
   ]
 }

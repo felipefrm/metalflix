@@ -2,133 +2,107 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
+import Button from '../../../components/Button';
+import useForm from '../../../hooks/useForm';
 
 function CadastroCategoria() {
-  const valoresIniciais = {
-    nome: '',
-    descricao: '',
-    cor: '',
-  }
-  const [categorias, setCategorias] = useState([]);
-  const [values, setValues] = useState(valoresIniciais);
+  
+    const valoresIniciais = {
+        titulo: '',
+        descricao: '',
+        cor: '',
+    };
 
+    const { handleChange, values, clearForm } = useForm(valoresIniciais);
 
-  function setValue(chave, valor) {
-    // chave: nome, descricao, bla, bli
-    setValues({
-      ...values,
-      [chave]: valor, // nome: 'valor'
-    })
-  }
+    const [categorias, setCategorias] = useState([]);
 
-  function handleChange(infosDoEvento) {
-    setValue(
-      infosDoEvento.target.getAttribute('name'),
-      infosDoEvento.target.value
-    );
-  }
+    useEffect(() => {
+        const URL_TOP = window.location.hostname.includes('localhost')
+        ? 'http://localhost:8080/categorias'
+        : 'https://lpflix.herokuapp.com/categorias';
 
-  // ============
+        fetch(URL_TOP)
+        .then(async (respostaDoServidor) => {
+            const resposta = await respostaDoServidor.json();
+            setCategorias([
+            ...resposta,
+            ]);
+        });
+    }, []);
 
-  useEffect(() => {
-    if(window.location.href.includes('localhost')) {
-      const URL = window.location.hostname.includes('localhost')
-      ? 'http://localhost:8080/categorias'
-      : 'https://metalflix-react.herokuapp.com/categorias'; 
-      fetch(URL)
-       .then(async (respostaDoServer) =>{
-        if(respostaDoServer.ok) {
-          const resposta = await respostaDoServer.json();
-          setCategorias(resposta);
-          return; 
-        }
-        throw new Error('Não foi possível pegar os dados');
-       })
-    }    
-  }, []);
+    return (
+        
+        <PageDefault>
+        
+        <h1>
+            Cadastro de Categoria:
+            {values.titulo}
+        </h1>
 
-  return (
-    <PageDefault>
-      <h1>Cadastro de Categoria: {values.nome}</h1>
-
-      <form onSubmit={function handleSubmit(infosDoEvento) {
-          infosDoEvento.preventDefault();
-
-          setCategorias([
+        <form onSubmit={function handleSubmit(infosDoEvento) {
+        
+            infosDoEvento.preventDefault();
+            
+            setCategorias([
             ...categorias,
-            values
-          ]);
+            values,
+            ]);
 
-          setValues(valoresIniciais)
-      }}>
+            clearForm();
 
-        <FormField
-          label="Nome da Categoria"
-          type="text"
-          name="nome"
-          value={values.nome}
-          onChange={handleChange}
-        />
+            }}
+            >
 
-        <FormField
-          label="Descrição:"
-          type="????"
-          name="descricao"
-          value={values.descricao}
-          onChange={handleChange}
-        />
-        {/* <div>
-          <label>
-            Descrição:
-            <textarea
-              type="text"
-              value={values.descricao}
-              name="descricao"
-              onChange={handleChange}
+            <FormField
+            label="Nome da Categoria"
+            name="titulo"
+            value={values.titulo}
+            onChange={handleChange}
             />
-          </label>
-        </div> */}
 
-        <FormField
-          label="Cor"
-          type="color"
-          name="cor"
-          value={values.cor}
-          onChange={handleChange}
-        />
-        {/* <div>
-          <label>
-            Cor:
-            <input
-              type="color"
-              value={values.cor}
-              name="cor"
-              onChange={handleChange}
+            <FormField
+            label="Descrição"
+            type="textarea"
+            name="descricao"
+            value={values.descricao}
+            onChange={handleChange}
             />
-          </label>
-        </div> */}
 
-        <button>
-          Cadastrar
-        </button>
-      </form>
-      
+            <FormField
+            label="Cor"
+            type="color"
+            name="cor"
+            value={values.cor}
+            onChange={handleChange}
+            />
 
-      <ul>
-        {categorias.map((categoria, indice) => {
-          return (
-            <li key={`${categoria}${indice}`}>
-              {categoria.titulo}
+            <Button>
+            Cadastrar
+            </Button>
+
+        </form>
+
+        {categorias.length === 0 && (
+            <div>
+            {/* Cargando... */}
+            Loading...
+            </div>
+        )}
+
+        <ul>
+            {categorias.map((categoria) => (
+            <li key={`${categoria.titulo}`}>
+                {categoria.titulo}
             </li>
-          )
-        })}
-      </ul>
+            ))}
+        </ul>
 
-      <Link to="/">
-        Ir para home
-      </Link>
-    </PageDefault>
-  )
+        <Link to="/">
+            Ir para home
+        </Link>
+        </PageDefault>
+    );
 }
 
 export default CadastroCategoria;
