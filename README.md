@@ -1,5 +1,3 @@
-# Aluraflix
-
 <p align="center">
   <img alt="Imersão React" width="150px" src="https://www.alura.com.br/assets/img/imersoes/react/imersao-react-logo.1594044142.svg" />
 </p>
