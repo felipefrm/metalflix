@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+=======
+<p align="center">
+  <img alt="Imersão React" width="150px" src="https://www.alura.com.br/assets/img/imersoes/react/imersao-react-logo.1594044142.svg" />
+</p>
+>>>>>>> 92792d5d11be7dadba9ff4bd6089832d2af64751
 
 In the project directory, you can run:
 
