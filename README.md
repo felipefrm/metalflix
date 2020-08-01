@@ -47,7 +47,7 @@ O layout do projeto pode ser visto através do [Figma](https://www.figma.com/fil
 
 ## :information_source: Como rodar o projeto
 
-Após baixar o projeto, acesse ele via seu terminal rode os comandos:
+Após baixar o projeto, acesse ele via seu terminal rode os comandos: 
 
 ```sh
 npm install
